@@ -3,6 +3,7 @@
     <img :src="require(`../assets/images/${product.image}`)" alt="" >
     <div class="mt-8  md:ml-10 ">
       <h3 class="text-2xl mb-5 text-gray-600">{{ product.name }}</h3>
+      <h3 class="text-xl mb-5 text-gray-600">{{ product.category }}</h3>
       <p class="leading-9 text-gray-600 mb-5">{{product.description }}</p>
       <h3 class="text-xl text-green-600 mb-5"> <span>&#8358;</span> {{ product.price.toFixed(2) }}</h3>
 
