@@ -1,5 +1,5 @@
 <template>
-  <div class="container text-center hover:cursor-pointer active:bg-green-700" @click="getProduct()">
+  <div class="container text-center hover:cursor-pointer active:bg-green-700 pb-4" @click="getProduct()">
     <img :src="require(`@/assets/images/${product.image}`)" alt="">
     <h3 class="mt-3">{{ product.name }}</h3>
     <h5 class="text-green-500">Price: <span>&#8358;</span> {{ product.price.toFixed(2) }}</h5>
