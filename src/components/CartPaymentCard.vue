@@ -4,13 +4,15 @@
     <section>
       <h3 class="text-xl text-green-500">Cart Total: <span>&#8358;</span> {{ cartTotal.toFixed(2) }}</h3>
 
-      <div class="flex justify-between bg-gray-10 my-5">
-        <input type="email" v-model="email" 
+      <form class="flex justify-between bg-gray-10 my-5">
+        <input type="email" v-model="email" required
         placeholder="enter email to checkout"
-        class="flex-3 py-2 text-center px-6">
+        class="flex-3 py-2 text-center px-6 md:mr-2">
+        <!-- <span v-if="msg">{{msg}}</span> -->
         <hr />
         <div class="container">
           <paystack
+          
             :amount="cartTotal * 100"
             :email="email"
             :paystackkey="PUBLIC_KEY"
@@ -24,7 +26,7 @@
             checkout
           </paystack>
         </div>
-      </div>
+      </form>
     </section>
   </div>
 </template>
@@ -36,12 +38,19 @@ export default {
   data(){
     return{
       email: '',
+      // msg: '',
       PUBLIC_KEY: "pk_test_fd6b060ad8fce5062160139d5e1bdbd1630586ea"
     }
   },
   components: {
     paystack
   },
+  // watch: {
+  //   email(value){
+  //     this.email = value;
+  //     this.validateEmail(value);
+  //   }
+  // },
   computed: {
     cartTotal() {
       return this.$store.getters.cartTotal
@@ -57,6 +66,7 @@ export default {
       return text;
     }
   },
+  
   methods: {
     processPayment: () => {
       window.alert("Payment recieved")
@@ -65,6 +75,15 @@ export default {
      console.log("You closed checkout page")
     }
   },
+
+  // validateEmail(value){
+  //     if (/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(value))
+  // {
+  //   this.msg = '';
+  // } else{
+  //   this.msg = 'Invalid Email Address';
+  // } 
+  // }
   
 };
 </script>

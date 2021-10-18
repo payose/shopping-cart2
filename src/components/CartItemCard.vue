@@ -1,6 +1,6 @@
 <template>
   <div class="flex bg-blue-50 border-solid border-4 border-gray-100 my-5">
-    <img :src="require(`../assets/images/${product.image}`)" class="max-h-16 md:max-h-28" alt="">
+    <img :src="require(`../assets/images/${product.image}`)" class="transform motion-safe:hover:scale-110 max-h-16 md:max-h-28" alt="">
     <div class="text-gray-500 ml-2 md:ml-10 flex flex-col md:flex-row flex-3 justify-between content-center w-4/5">
       <div class="flex flex-wrap content-center">
         <p class=" md:text-xl inline">{{ product.name}}</p>

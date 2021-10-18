@@ -10,10 +10,8 @@
       <div class="flex justify-between items-center"> 
         <button class="flex-1 text-white hoverred-700 mr-2 focus:bg-green-700 focus:outline-none shadow-sm bg-green-700 rounded-sm py-2 px-6" 
         @click="addToCart()">Add to cart</button>
-        <!-- <a href="../cart" class="flex-1 text-white text-center hovered-500 ml-2 focus:bg-green-500 focus:outline-none shadow-sm bg-green-500 rounded-sm py-2 px-6" >View cart</a> -->
       </div>
     </div>
-    
   </div>
 </template>
 
@@ -31,7 +29,6 @@ export default {
     addToCart() {
       this.$store.commit('addToCart', this.product)
     }
-
   }
 
 }
