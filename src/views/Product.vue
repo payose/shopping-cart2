@@ -8,7 +8,7 @@
       <h3 class="text-xl text-green-600 mb-5"> <span>&#8358;</span> {{ product.price.toFixed(2) }}</h3>
 
       <div class="flex justify-between items-center"> 
-        <button class="flex-1 text-white hoverred-700 mr-2 focus:bg-green-700 focus:outline-none shadow-sm bg-green-700 rounded-sm py-2 px-6" 
+        <button class="flex-1 text-white hoverred-700 mr-2 focus:bg-green-600 focus:outline-none shadow-sm bg-green-500 rounded-sm py-2 px-6" 
         @click="addToCart()">Add to cart</button>
       </div>
     </div>
@@ -16,20 +16,20 @@
 </template>
 
 <script> 
-import { mapState } from 'vuex'
-
 export default {
-  computed: {
-    ...mapState([
-      'product'
-    ])
+  data(){
+    return{
+      product:null
+    }
   },
-
   methods: {
     addToCart() {
       this.$store.commit('addToCart', this.product)
     }
-  }
+  },
 
+  mounted(){
+    this.product = this.$store.state.products[this.$route.params.id-1]
+  }
 }
 </script>

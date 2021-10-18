@@ -4,6 +4,7 @@
     <section>
       <h3 class="text-xl text-green-500">Cart Total: <span>&#8358;</span> {{ cartTotal.toFixed(2) }}</h3>
 
+      <div class="flex justify-between bg-gray-10 my-5">
         <input type="email" v-model="email" required
         placeholder="enter email to checkout"
         class="flex-3 py-2 text-center px-6 md:mr-2">
@@ -24,6 +25,7 @@
             checkout
           </paystack>
         </div>
+      </div>
     </section>
   </div>
 </template>

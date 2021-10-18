@@ -12,10 +12,8 @@
 </template>
 
 <script>
-// @ is an alias to /src
 
 import Cards from '@/components/Cards.vue'
-// import { mapMutations } from 'vuex'
 import { mapState } from 'vuex'
 
 export default {
@@ -30,10 +28,6 @@ export default {
     ...mapState([
       'products'
     ]),
-
-    // ...mapMutations([
-    //   'fetchMoreMovies'
-    // ])
   },
 
   mounted () {
