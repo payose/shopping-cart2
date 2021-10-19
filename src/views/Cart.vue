@@ -7,12 +7,9 @@
       :key="product.id"
       :product="product"
     />
-
     <CartPaymentCard
     />
     </div>
-
-    
   </div>
 </template>
 

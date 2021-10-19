@@ -12,7 +12,6 @@
 </template>
 
 <script>
-
 import Cards from '@/components/Cards.vue'
 import { mapState } from 'vuex'
 
@@ -21,17 +20,11 @@ export default {
     Cards
   },
 
-  methods: {
-  },
-
   computed: {
     ...mapState([
       'products'
     ]),
   },
-
-  mounted () {
-    
-  }
+  
 }
 </script>
