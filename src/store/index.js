@@ -1,4 +1,3 @@
-
 import Vue from 'vue'
 import Vuex from 'vuex'
 import products from '../data/items.js'
@@ -55,6 +54,12 @@ export default new Vuex.Store({
         }
       }
 
+      updateLocalStorage(state.cart)
+    },
+
+    emptyCart (state) {
+      state.cart = []
+      console.log(state.cart, 'emptied')
       updateLocalStorage(state.cart)
     },
 

@@ -1,7 +1,11 @@
 <template>
   <div>
     <h1 class="text-green-500 text-3xl mx-5 md:mx-40 md:py-10">My Shopping Cart</h1>
-    <div class="bg-white mx-5 my-10 md:mx-40 p-3 md:p-10">
+    <div v-if="!products.length" class="p-5 bg-red-100 my-5 mx-5 md:p-10 md:m-20 md:text-center border rounded-md">
+      <h2 class="text-gray-600 text-2xl">Opps... Shopping cart empty</h2>
+    </div>
+    <div v-else>
+      <div class="bg-white mx-5 my-10 md:mx-40 p-3 md:p-10">
       <CartItemCard 
       v-for="product in products"
       :key="product.id"
@@ -10,6 +14,8 @@
     <CartPaymentCard
     />
     </div>
+    </div>
+    
   </div>
 </template>
 

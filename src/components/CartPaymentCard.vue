@@ -4,8 +4,8 @@
       <h3 class="text-xl text-green-500">Cart Total: <span>&#8358;</span> {{ cartTotal.toFixed(2) }}</h3>
       <div class="md:flex justify-between bg-gray-10 my-5">
         <input type="email" v-model="email" required
-        placeholder="enter email to checkout"
-        class="flex-3 py-2 text-center px-6 md:mr-2">
+          placeholder="enter email to checkout"
+          class="flex-3 py-1 text-center px-6 sm:mr-5">
         <div class="container">
           <paystack
             :amount="cartTotal * 100"
@@ -13,6 +13,7 @@
             :paystackkey="PUBLIC_KEY"
             :reference="reference"
             :callback="processPayment"
+            :emptyCart="emptyCart"
             :close="close"
             :embed="false"
             class="flex-1 text-white hover:bg-green-700 focus:bg-green-700 focus:outline-none shadow-sm bg-green-500 rounded-sm py-2 px-6"
@@ -57,13 +58,15 @@ export default {
   },
   
   methods: {
-    processPayment: () => {
+    processPayment()  {
+      this.$store.commit('emptyCart')
       window.alert("Payment recieved")
+
     },
     close: () => {
      console.log("You closed checkout page")
-    }
-  },
+    },
+  }
 };
 </script>
 
