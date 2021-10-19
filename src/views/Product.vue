@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col md:flex-row items-center mx-5 md:mx-10">
+  <div class="flex flex-col md:flex-row items-center mx-5 mb-5 md:mx-10">
     <img :src="require(`../assets/images/${product.image}`)" class="rounded shadow-sm" alt="">
     <div class="mt-8  md:ml-10 md:mt-0">
       <h3 class="text-2xl mb-5 text-green-600 font-meduim">{{ product.name }}</h3>
