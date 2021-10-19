@@ -2,10 +2,10 @@
   <div id="app">
     <section>
       <h3 class="text-xl text-green-500">Cart Total: <span>&#8358;</span> {{ cartTotal.toFixed(2) }}</h3>
-      <div class="md:flex justify-between bg-gray-10 my-5">
+      <div class="md:flex items-center bg-gray-10 my-5">
         <input type="email" v-model="email" required
           placeholder="enter email to checkout"
-          class="flex-3 py-1 text-center px-6 sm:mr-5">
+          class="flex-3 py-2 my-2 text-center px-6 sm:mr-2 rounded-md shadow-sm focus:outline-none">
         <div class="container">
           <paystack
             :amount="cartTotal * 100"
@@ -16,7 +16,7 @@
             :emptyCart="emptyCart"
             :close="close"
             :embed="false"
-            class="flex-1 text-white hover:bg-green-700 focus:bg-green-700 focus:outline-none shadow-sm bg-green-500 rounded-sm py-2 px-6"
+            class="flex-1 rounded-md text-white hover:bg-green-600 focus:bg-green-700 focus:outline-none shadow-sm bg-green-500 py-2 px-6"
           >
             <i class="fas fa-money-bill-alt"></i>
             checkout
@@ -74,17 +74,13 @@ export default {
 
 input {
   width: 100%;
-  padding: 16px 8px;
-  margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
   box-sizing: border-box;
 }
 button {
-  padding: 14px 0;
-  margin: 10px 0;
   border: none;
-  cursor: grabbing;
+  cursor: pointer;
   width: 100%;
 }
 

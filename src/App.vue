@@ -1,7 +1,7 @@
 <template>
   <div class="app w-screen">
     <div class="shadow-sm flex justify-between items-center px-5 md:px-10 py-10 w-full h-12 bg-white p-6 mb-12">
-      <router-link to="/" class="text-white rounded-md hover:bg-green-700 focus:bg-green-700 focus:outline-none shadow-sm bg-green-500 py-2 px-6">Home</router-link> 
+      <router-link to="/" class="text-white rounded-md hover:bg-green-600 focus:bg-green-600 focus:outline-none shadow-sm bg-green-500 py-2 px-6">Home</router-link> 
       <router-link to="/cart" class="w-10 relative">
         <img src="./assets/cart.svg" alt="" >
         <span class="item-count">{{ amountOfCartItems }}</span>
