@@ -1,11 +1,11 @@
 <template>
   <div class="flex items-center bg-blue-50 border-solid border-4 border-blue-50 rounded-md shadow-md my-5">
-    <div class=" bg-white flex justify-center rounded-md m-1">
+    <div class="bg-white flex justify-center rounded-md m-1">
       <img :src="require(`../assets/images/${product.image}`)" class="m-5 items-center transform motion-safe:hover:scale-110 max-h-16 md:max-h-28" alt="">
     </div>
     <div class="text-gray-500 ml-2 md:ml-10 flex flex-col md:flex-row flex-3 justify-between content-center w-4/5">
       <div class="flex flex-wrap content-center">
-        <p class=" text-sm md:text-xl inline">{{ product.name}}</p>
+        <p class="text-sm md:text-xl inline">{{ product.name}}</p>
       </div>
         <div class="flex items-center"> 
           <button class="px-3 py-1 md:py-3 md:px-5 rounded-md border-solid border-2 border-blue-50 bg-white" @click="addToCart()">+</button>

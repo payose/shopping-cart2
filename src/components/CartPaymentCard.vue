@@ -61,7 +61,6 @@ export default {
     processPayment()  {
       this.$store.commit('emptyCart')
       window.alert("Payment recieved")
-
     },
     close: () => {
      console.log("You closed checkout page")

@@ -5,8 +5,8 @@
       <router-link to="/cart" class="w-10 relative">
         <img src="./assets/cart.svg" alt="" >
         <span class="item-count">{{ amountOfCartItems }}</span>
+      <!-- <router-link to="/"></router-link>  -->
       </router-link>
-      <!-- <router-link to="/product"></router-link> -->
     </div>
     <router-view/>
   </div>
