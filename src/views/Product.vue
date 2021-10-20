@@ -6,7 +6,6 @@
       <h3 class="text-sm mb-5 text-gray-700 font-meduim">Category : {{ product.category }}</h3>
       <p class="leading-9 text-gray-600 mb-5">{{product.description }}</p>
       <h3 class="text-xl text-green-600 mb-5"> <span>&#8358;</span> {{ product.price.toFixed(2) }}</h3>
-
       <div class="flex justify-between items-center"> 
         <button class="flex-1 text-white mr-2 focus:bg-green-600 focus:outline-none shadow-sm bg-green-500 rounded-sm py-2 px-6" 
         @click="addToCart()">Add to cart</button>
